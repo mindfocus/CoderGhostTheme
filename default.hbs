@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     {{! Page Meta }}
     <title>
-    {{meta_title}}{{#is "post"}} | {{@blog.title}}{{/is}}
+    {{meta_title}}{{#is "post"}} | {{@site.title}}{{/is}}
     </title>
 
     {{! Page Meta }}
@@ -56,10 +56,10 @@
 </head>
 <body>
 {{#is "home"}}
-    {{#if @blog.cover_image}}
-        <div style="background:url({{@blog.cover_image}}) no-repeat center center;" class="cover cover-border hidden-sm hidden-xs">
+    {{#if @site.cover_image}}
+        <div style="background:url({{@site.cover_image}}) no-repeat center center;" class="cover cover-border hidden-sm hidden-xs">
             <div class="blog-description">
-                <h1>{{@blog.description}}</h1>
+                <h1>{{@site.description}}</h1>
             </div>
         </div>
     {{/if}}
@@ -89,7 +89,7 @@
         <div class="row">
           <div class="col-xs-6">
           <i class="el el-stop footer-icon"></i>
-            &copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a> All rights reserved.<br><br>
+            &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> All rights reserved.<br><br>
             Coder Ghost Theme created by <a href="https://www.mbejda.com">Milos Bejda</a>
           </div>
           <div class="col-xs-6 text-right hidden-sm hidden-xs">Proudly published with <a href="https://ghost.org">Ghost</a></div>

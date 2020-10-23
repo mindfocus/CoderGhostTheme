@@ -2,7 +2,7 @@
 {{#is "index,home"}}
 
 
-    {{#if @blog.cover_image}}" style="background-image: url({{cover_image}})
+    {{#if @site.cover_image}}" style="background-image: url({{cover_image}})
     {{else}}default-cover
     {{/if}}
 {{else}}
@@ -19,15 +19,15 @@
     <div class="navbar" role="navigation">
         <div class="container">
             <div class="pull-left">
-                <a class="{{#if @blog.logo}}btn navbar-btn{{else}}navbar-brand{{/if}}" href="{{@blog.url}}">
-                    {{#if @blog.logo}}
-                        <img src="{{@blog.logo}}" alt="Blog Logo"/>
+                <a class="{{#if @site.logo}}btn navbar-btn{{else}}navbar-brand{{/if}}" href="{{@site.url}}">
+                    {{#if @site.logo}}
+                        <img src="{{@site.logo}}" alt="Blog Logo"/>
                     {{/if}}
-                    <span class="hidden-xs">&nbsp;{{@blog.title}}</span>
+                    <span class="hidden-xs">&nbsp;{{@site.title}}</span>
                 </a>
             </div>
             <div class="pull-right">
-                <a class="btn navbar-btn" href="{{@blog.url}}/rss/"><i class="fa fa-rss"></i> Subscribe</a>
+                <a class="btn navbar-btn" href="{{@site.url}}/rss/"><i class="fa fa-rss"></i> Subscribe</a>
                 &nbsp;
                 <!--<form class="navbar-btn pull-right hidden-xs" autocomplete="off">
                     <input id="search-field" type="text"  placeholder="Search article"/>
